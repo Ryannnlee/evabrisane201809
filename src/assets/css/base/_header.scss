@@ -73,10 +73,10 @@ body {
         cursor: pointer;
         @include transition(all 0.3s);
         @media screen and (min-width: 1025px) {
-            &:hover {
-                a {
-                    color: #2bbbbe;
-                    border-bottom: 3px solid #2bbbbe;
+            &:hover a {
+                color: #2bbbbe;
+                &:after {
+                    width: 100%;
                 }
             }
         }
@@ -86,14 +86,26 @@ body {
             font-weight: bold;
             letter-spacing: 2px;
             color: #555555;
-            padding: 20px 0;
-            border-bottom: 3px solid transparent;
+            padding: 22px 0;
+            // border-bottom: 3px solid transparent;
             position: relative;
             @include transition(all 0.3s);
+            &:after {
+                content: '';
+                width: 0;
+                display: block;
+                height: 4px;
+                background: #2bbbbe;
+                position: absolute;
+                bottom: 0;
+                @include transition(all 0.3s);
+            }
         }
         &.underLineActive a {
             color: #2bbbbe;
-            border-bottom: 3px solid #2bbbbe;
+            &:after {
+                width: 100%;
+            }
         }
     }
 }
@@ -111,7 +123,7 @@ body {
 }
 
 .buttonContainer span {
-    background: #ff7800;
+    background: #2bbbbe;
     border: none;
     height: 2px;
     width: 100%;
@@ -139,17 +151,40 @@ body {
 
 .buttonContainer.active .top {
     @include transform(translateY(8px) translateX(-50%) rotate(45deg));
-    background: #ff7800;
+    background: #2bbbbe;
 }
 
 .buttonContainer.active .middle {
     opacity: 0;
-    background: #ff7800;
+    background: #2bbbbe;
 }
 
 .buttonContainer.active .bottom {
     @include transform(translateY(-10px) translateX(-50%) rotate(-45deg));
-    background: #ff7800;
+    background: #2bbbbe;
+}
+
+@media screen and (max-width: 1249px) {
+    .headContainer {
+        width: 90%;
+    }
+    #logo {
+        width: 25%;
+    }
+    #menu li a {
+        font-size: 1.15em;
+        padding: 16px 0;
+        &:after {
+            height: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    .headContainer {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -167,7 +202,7 @@ body {
         top: 0;
         right: 0;
         z-index: 98;
-        width: 100%;
+        width: 50%;
         height: 100%;
         text-align: center;
         @include transition(all .5s);
@@ -196,6 +231,7 @@ body {
             visibility: visible;
             height: 100%;
             li {
+                display: block;
                 -webkit-animation: fadeInRight 0.5s ease forwards;
                 animation: fadeInRight 0.5s ease forwards;
                 -webkit-animation-delay: 0.35s;
@@ -211,6 +247,9 @@ body {
                 &:nth-child(4) {
                     -webkit-animation-delay: 0.5s;
                     animation-delay: 0.5s;
+                }
+                a:after {
+                    content: none;
                 }
             }
         }

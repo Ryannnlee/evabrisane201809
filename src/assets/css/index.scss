@@ -1,4 +1,9 @@
 @import "base/transform";
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
 #loading {
     width: 100%;
     background: #ffffff;
@@ -139,6 +144,28 @@
         top: -15px;
         left: -220%;
         transition: all 3s ease;
+    }
+}
+
+.sloganSvg {
+    svg {
+        -webkit-filter: drop-shadow(12px 12px 10px rgba(255, 255, 255, 1));
+        filter: drop-shadow(12px 12px 10px rgba(255, 255, 255, 1));
+    }
+    .st0 {
+        fill: #062A48;
+    }
+    .st1 {
+        fill: #42E8E8;
+    }
+    .st2 {
+        fill: #FFD833;
+    }
+    .st3 {
+        fill: #FFFFFF;
+    }
+    .st4 {
+        fill: #EB6348;
     }
 }
 
@@ -340,22 +367,20 @@
 
 .wave {
     width: 200px;
+    padding-bottom: 20px;
+    background-size: auto 20px;
     position: absolute;
     background-position: 0 0;
     background-repeat: repeat-x;
 }
 
 .yellowWave {
-    padding-bottom: 20px;
     background-image: url(../images/yellowWave.svg);
-    background-size: auto 20px;
     animation: yellowWave 5s linear 0s infinite;
 }
 
 .blueWave {
-    padding-bottom: 20px;
     background-image: url(../images/blueWave.svg);
-    background-size: auto 20px;
     animation: blueWave 6s linear 0s infinite;
 }
 
@@ -424,6 +449,148 @@
             p {
                 color: #ffffff;
                 line-height: 1.2em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1499px) {
+    .slogan {
+        max-width: 380px;
+        @include transform(translate(0, -60%));
+    }
+}
+
+@media screen and (max-width: 1249px) {
+    #kv {
+        top: 40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .slogan {
+        max-width: none;
+        width: 60%;
+    }
+    .evaCityScale {
+        bottom: 50px;
+    }
+    .evaCity img {
+        @include transform(scale(2));
+    }
+    .containerBg {
+        margin-top: 0;
+    }
+    .flightInformation {
+        padding: 20% 0 0 0;
+        background-size: auto 80%;
+        .flightInfoSlick {
+            width: 60%;
+            .slick-slide {
+                border-radius: 0;
+            }
+        }
+    }
+    .stroke {
+        h1 {
+            margin-top: 0;
+            margin-bottom: 14%;
+        }
+        .strokeList {
+            width: 80%;
+            margin: 0 auto;
+            .strokeItem {
+                font-size: 1.4em;
+                p {
+                    line-height: 1.44em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .stroke .strokeList {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .containerBg:before,
+    .containerBg:after {
+        background-size: 200%;
+        background-position: left;
+        padding-bottom: 40%;
+    }
+    .slogan {
+        width: 80%;
+    }
+    .evaCityScale {
+        bottom: 30px;
+    }
+    .containerBg {
+        margin-top: 20px;
+    }
+    .wave {
+        @include transform(scale(0.55));
+    }
+    .flightInformation {
+        .slick-prev,
+        .slick-next {
+            width: 20px;
+            height: 33px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .flightInfoBtn {
+            margin: 30px 0;
+        }
+        .btn {
+            margin: 0 5px;
+            a {
+                font-size: 1.6em;
+                line-height: 1.2em;
+                padding: 0.4em 1.4em;
+            }
+        }
+    }
+    .stroke {
+        padding-bottom: 40%;
+        h1 {
+            .yellowWave {
+                bottom: -170%;
+                right: 0;
+            }
+            .blueWave {
+                bottom: -90%;
+                right: -10%;
+            }
+        }
+        .strokeList {
+            width: 90%;
+            grid-template-columns: 1fr;
+            .strokeItem {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .flightInformation {
+        .btn {
+            margin: 10px;
+            display: block;
+            border-radius: 44px;
+            a {
+                font-size: 1.4em;
+                span.visible-phone {
+                    display: inline-block !important;
+                }
+                br {
+                    display: none;
+                }
             }
         }
     }

@@ -73,6 +73,19 @@ $(function () {
         });
     }
 
+    $(window).on('scroll', function () {
+        var $flightInformation = $('.flightInformation').offset().top;
+        var $stroke = $('.stroke').offset().top;
+        $('#menu li').removeClass('underLineActive');
+        if ($(this).scrollTop() < $flightInformation - 300) {
+            $('.menuBrisbane').addClass('underLineActive');
+        } else if ($(this).scrollTop() < $stroke - 500) {
+            $('.menuFlight').addClass('underLineActive');
+        } else {
+            $('.menuStroke').addClass('underLineActive');
+        }
+    });
+
     //bubbly
     bubbly({
         blur: 3,
@@ -125,11 +138,11 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, '800');
     });
     $('.menuFlight').on('click', function () {
-        var $flightInformation = $('.flightInformation').offset().top;
+        var $flightInformation = $('.flightInformation').offset().top - 15;
         $('html, body').animate({ scrollTop: $flightInformation }, '800');
     });
     $('.menuStroke').on('click', function () {
-        var $stroke = $('.stroke').offset().top;
+        var $stroke = $('.stroke').offset().top - 60;
         $('html, body').animate({ scrollTop: $stroke }, '800');
     });
 });

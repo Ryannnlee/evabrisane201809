@@ -1,3 +1,8 @@
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
 #loading {
   width: 100%;
   background: #ffffff;
@@ -150,6 +155,31 @@
   -webkit-transition: all 3s ease;
   -o-transition: all 3s ease;
   transition: all 3s ease;
+}
+
+.sloganSvg svg {
+  -webkit-filter: drop-shadow(12px 12px 10px white);
+  filter: drop-shadow(12px 12px 10px white);
+}
+
+.sloganSvg .st0 {
+  fill: #062A48;
+}
+
+.sloganSvg .st1 {
+  fill: #42E8E8;
+}
+
+.sloganSvg .st2 {
+  fill: #FFD833;
+}
+
+.sloganSvg .st3 {
+  fill: #FFFFFF;
+}
+
+.sloganSvg .st4 {
+  fill: #EB6348;
 }
 
 .sloganTxt {
@@ -395,23 +425,21 @@
 
 .wave {
   width: 200px;
+  padding-bottom: 20px;
+  background-size: auto 20px;
   position: absolute;
   background-position: 0 0;
   background-repeat: repeat-x;
 }
 
 .yellowWave {
-  padding-bottom: 20px;
   background-image: url(../images/yellowWave.svg);
-  background-size: auto 20px;
   -webkit-animation: yellowWave 5s linear 0s infinite;
           animation: yellowWave 5s linear 0s infinite;
 }
 
 .blueWave {
-  padding-bottom: 20px;
   background-image: url(../images/blueWave.svg);
-  background-size: auto 20px;
   -webkit-animation: blueWave 6s linear 0s infinite;
           animation: blueWave 6s linear 0s infinite;
 }
@@ -520,4 +548,152 @@
 .stroke .strokeList .strokeItem p {
   color: #ffffff;
   line-height: 1.2em;
+}
+
+@media screen and (max-width: 1499px) {
+  .slogan {
+    max-width: 380px;
+    transform: translate(0, -60%);
+    -webkit-transform: translate(0, -60%);
+    -moz-transform: translate(0, -60%);
+    -ms-transform: translate(0, -60%);
+    -o-transform: translate(0, -60%);
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  #kv {
+    top: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slogan {
+    max-width: none;
+    width: 60%;
+  }
+  .evaCityScale {
+    bottom: 50px;
+  }
+  .evaCity img {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+  }
+  .containerBg {
+    margin-top: 0;
+  }
+  .flightInformation {
+    padding: 20% 0 0 0;
+    background-size: auto 80%;
+  }
+  .flightInformation .flightInfoSlick {
+    width: 60%;
+  }
+  .flightInformation .flightInfoSlick .slick-slide {
+    border-radius: 0;
+  }
+  .stroke h1 {
+    margin-top: 0;
+    margin-bottom: 14%;
+  }
+  .stroke .strokeList {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .stroke .strokeList .strokeItem {
+    font-size: 1.4em;
+  }
+  .stroke .strokeList .strokeItem p {
+    line-height: 1.44em;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .stroke .strokeList {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .containerBg:before,
+  .containerBg:after {
+    background-size: 200%;
+    background-position: left;
+    padding-bottom: 40%;
+  }
+  .slogan {
+    width: 80%;
+  }
+  .evaCityScale {
+    bottom: 30px;
+  }
+  .containerBg {
+    margin-top: 20px;
+  }
+  .wave {
+    transform: scale(0.55);
+    -webkit-transform: scale(0.55);
+    -moz-transform: scale(0.55);
+    -ms-transform: scale(0.55);
+    -o-transform: scale(0.55);
+  }
+  .flightInformation .slick-prev,
+  .flightInformation .slick-next {
+    width: 20px;
+    height: 33px;
+  }
+  .flightInformation p {
+    font-size: 1.2em;
+  }
+  .flightInformation .flightInfoBtn {
+    margin: 30px 0;
+  }
+  .flightInformation .btn {
+    margin: 0 5px;
+  }
+  .flightInformation .btn a {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    padding: 0.4em 1.4em;
+  }
+  .stroke {
+    padding-bottom: 40%;
+  }
+  .stroke h1 .yellowWave {
+    bottom: -170%;
+    right: 0;
+  }
+  .stroke h1 .blueWave {
+    bottom: -90%;
+    right: -10%;
+  }
+  .stroke .strokeList {
+    width: 90%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .stroke .strokeList .strokeItem {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .flightInformation .btn {
+    margin: 10px;
+    display: block;
+    border-radius: 44px;
+  }
+  .flightInformation .btn a {
+    font-size: 1.4em;
+  }
+  .flightInformation .btn a span.visible-phone {
+    display: inline-block !important;
+  }
+  .flightInformation .btn a br {
+    display: none;
+  }
 }
