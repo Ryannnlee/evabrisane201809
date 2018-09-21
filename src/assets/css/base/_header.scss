@@ -1,0 +1,269 @@
+/* Header ----------------------- */
+
+@import "transform";
+//TEST
+body {
+    background: #cccccc;
+    height: 200vh;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #ffffff;
+}
+
+.header.scrollAfter {
+    .headContainer {
+        width: 100%;
+    }
+    #logo {
+        max-width: 300px;
+    }
+    .navTabs {
+        width: 70%;
+    }
+    #menu {
+        li {
+            a {
+                font-size: 1.15em;
+                padding: 16px 0;
+            }
+        }
+    }
+}
+
+.headContainer {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    background: #ffffff;
+    position: relative;
+    @include transition(all 0.3s);
+}
+
+#logo {
+    width: 33%;
+    max-width: 350px;
+    min-width: 150px;
+    margin-left: 15px;
+    padding: 5px 0;
+    display: inline-block;
+    vertical-align: middle;
+    @include transition(all 0.3s);
+}
+
+.navTabs {
+    width: 65%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    @include transition(all 0.3s);
+}
+
+//menu
+#menu {
+    li {
+        display: inline-block;
+        padding: 0 15px;
+        cursor: pointer;
+        @include transition(all 0.3s);
+        @media screen and (min-width: 1025px) {
+            &:hover {
+                a {
+                    color: #2bbbbe;
+                    border-bottom: 3px solid #2bbbbe;
+                }
+            }
+        }
+        a {
+            display: block;
+            font-size: 1.25em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #555555;
+            padding: 20px 0;
+            border-bottom: 3px solid transparent;
+            position: relative;
+            @include transition(all 0.3s);
+        }
+        &.underLineActive a {
+            color: #2bbbbe;
+            border-bottom: 3px solid #2bbbbe;
+        }
+    }
+}
+
+.buttonContainer {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    height: 18px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    @include transform(translate(0, -50%));
+    @include transition(opacity .25s ease);
+}
+
+.buttonContainer span {
+    background: #ff7800;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    @include transform(translateX(-50%));
+    @include transition(all .35s ease);
+    cursor: pointer;
+}
+
+.buttonContainer span:nth-child(2) {
+    top: 50%;
+}
+
+.buttonContainer span:nth-child(3) {
+    top: 100%;
+}
+
+@media (min-width: 1025px) {
+    .buttonContainer {
+        display: none;
+    }
+}
+
+.buttonContainer.active .top {
+    @include transform(translateY(8px) translateX(-50%) rotate(45deg));
+    background: #ff7800;
+}
+
+.buttonContainer.active .middle {
+    opacity: 0;
+    background: #ff7800;
+}
+
+.buttonContainer.active .bottom {
+    @include transform(translateY(-10px) translateX(-50%) rotate(-45deg));
+    background: #ff7800;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+    #logo {
+        margin: 0;
+    }
+    .navTabs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 98;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        @include transition(all .5s);
+        margin-top: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        font-size: 1.15em;
+    }
+    #overlay {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.98);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        height: 0%;
+        opacity: 0;
+        opacity: 1\9\0;
+        visibility: hidden;
+        @include transition(all 0.3s);
+        overflow: hidden;
+        z-index: 1000;
+        &.open {
+            opacity: 0.95;
+            visibility: visible;
+            height: 100%;
+            li {
+                -webkit-animation: fadeInRight 0.5s ease forwards;
+                animation: fadeInRight 0.5s ease forwards;
+                -webkit-animation-delay: 0.35s;
+                animation-delay: 0.35s;
+                &:nth-child(2) {
+                    -webkit-animation-delay: 0.4s;
+                    animation-delay: 0.4s;
+                }
+                &:nth-child(3) {
+                    -webkit-animation-delay: 0.45s;
+                    animation-delay: 0.45s;
+                }
+                &:nth-child(4) {
+                    -webkit-animation-delay: 0.5s;
+                    animation-delay: 0.5s;
+                }
+            }
+        }
+        ul {
+            width: 100%;
+            position: relative;
+            top: 50%;
+            @include transform(translate(0, -50%));
+        }
+        li {
+            opacity: 0;
+            opacity: 1\9\0;
+            position: relative;
+            margin: 2em 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #logo {
+        width: 30%;
+    }
+    .buttonContainer {
+        right: 4px;
+        height: 14px;
+        width: 25px;
+    }
+    .buttonContainer.active .top {
+        @include transform(translateY(6px) translateX(-50%) rotate(45deg));
+    }
+    .buttonContainer.active .bottom {
+        @include transform(translateY(-9px) translateX(-50%) rotate(-45deg));
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}

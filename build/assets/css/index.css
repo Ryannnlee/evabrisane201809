@@ -1,0 +1,523 @@
+#loading {
+  width: 100%;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #2bbbbe;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2s infinite ease-in-out;
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  -moz-animation: sk-bounce 2s infinite ease-in-out;
+  -ms-animation: sk-bounce 2s infinite ease-in-out;
+  -o-animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.container {
+  width: 100%;
+  max-width: 1010px;
+  margin: 0 auto;
+}
+
+#kv {
+  position: relative;
+  top: 60px;
+  background-color: #ccc;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.kvSlick,
+.slick-list,
+.slick-track,
+.slick-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.kvSlick .slider1 {
+  background: url(../images/kvSlider1.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.kvSlick .slider1:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.kvSlick .slider2 {
+  background: url(../images/kvSlider2.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.slogan {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translate(0, -70%);
+  -webkit-transform: translate(0, -70%);
+  -moz-transform: translate(0, -70%);
+  -ms-transform: translate(0, -70%);
+  -o-transform: translate(0, -70%);
+  z-index: 3;
+}
+
+.slogan .letsGo {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: -15px;
+  left: -220%;
+  -webkit-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
+}
+
+.sloganTxt {
+  width: 100%;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.8s cubic-bezier(0.085, 0.985, 0.26, 1);
+  -o-transition: all 0.8s cubic-bezier(0.085, 0.985, 0.26, 1);
+  transition: all 0.8s cubic-bezier(0.085, 0.985, 0.26, 1);
+}
+
+.sloganTxtScale {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.slogan .letsGoFly {
+  left: 0;
+}
+
+.evaCity {
+  width: 100%;
+  position: absolute;
+  bottom: -190px;
+  z-index: 2;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.8s cubic-bezier(0.085, 0.985, 0.26, 1);
+  -o-transition: all 0.8s cubic-bezier(0.085, 0.985, 0.26, 1);
+  transition: all 0.8s cubic-bezier(0.085, 0.985, 0.26, 1);
+}
+
+.evaCityScale {
+  left: 0;
+  bottom: -50px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.containerBg {
+  background: url(../images/containerBg.png) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
+  margin-top: 77px;
+}
+
+.containerBg:before {
+  content: '';
+  width: 100%;
+  padding-bottom: 20%;
+  background: url(../images/topSea.png) top center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+}
+
+.containerBg:after {
+  content: '';
+  width: 100%;
+  padding-bottom: 26%;
+  background: url(../images/bottomSea.png) bottom center no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.flightInformation {
+  width: 100%;
+  display: block;
+  background: url(../images/flightInfoBg.png) center center no-repeat;
+  background-size: 90%;
+  position: relative;
+  z-index: 4;
+  padding: 10% 0;
+}
+
+.flightInformation h1 {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 4.66%;
+}
+
+.flightInformation h1 .yellowWave {
+  top: -75%;
+  left: 20%;
+}
+
+.flightInformation h1 .blueWave {
+  top: -42%;
+}
+
+.flightInformation h2 {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 2.66%;
+}
+
+.flightInformation .flightInfoSlick {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50%;
+  margin-bottom: 4.66%;
+  position: relative;
+}
+
+.flightInformation .flightInfoSlick .slick-list {
+  position: absolute;
+}
+
+.flightInformation .flightInfoSlick .slick-slide {
+  border-radius: 108px 10px;
+}
+
+.flightInformation .flightInfoSlick .slider1 {
+  background: url(../images/flightInfoSlider1.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider2 {
+  background: url(../images/flightInfoSlider2.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider3 {
+  background: url(../images/flightInfoSlider3.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider4 {
+  background: url(../images/flightInfoSlider4.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider5 {
+  background: url(../images/flightInfoSlider5.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider6 {
+  background: url(../images/flightInfoSlider6.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider7 {
+  background: url(../images/flightInfoSlider7.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider8 {
+  background: url(../images/flightInfoSlider8.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider9 {
+  background: url(../images/flightInfoSlider9.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider10 {
+  background: url(../images/flightInfoSlider10.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider11 {
+  background: url(../images/flightInfoSlider11.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .flightInfoSlick .slider12 {
+  background: url(../images/flightInfoSlider12.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+.flightInformation .slick-prev,
+.flightInformation .slick-next {
+  width: 32px;
+  height: 53px;
+}
+
+.flightInformation .slick-prev {
+  left: -45px;
+  background: url(../images/arrowLeft.svg) center center no-repeat;
+  background-size: cover;
+}
+
+.flightInformation .slick-next {
+  right: -45px;
+  background: url(../images/arrowRight.svg) center center no-repeat;
+  background-size: cover;
+}
+
+.flightInformation p {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 1.5em;
+  line-height: 1.44em;
+  font-weight: 700;
+}
+
+.flightInformation .flightInfoBtn {
+  width: 100%;
+  text-align: center;
+}
+
+.flightInformation .btn {
+  display: inline-block;
+  background-color: #2bbbbe;
+  border-radius: 100px;
+  margin: 50px 20px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+@media screen and (min-width: 1025px) {
+  .flightInformation .btn:hover {
+    background-color: #54d9dc;
+  }
+}
+
+.flightInformation .btn a {
+  display: block;
+  font-size: 1.875em;
+  line-height: 1.1em;
+  font-weight: 700;
+  padding: 0.4em 1.2em;
+  color: #ffffff;
+}
+
+.wave {
+  width: 200px;
+  position: absolute;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+}
+
+.yellowWave {
+  padding-bottom: 20px;
+  background-image: url(../images/yellowWave.svg);
+  background-size: auto 20px;
+  -webkit-animation: yellowWave 5s linear 0s infinite;
+          animation: yellowWave 5s linear 0s infinite;
+}
+
+.blueWave {
+  padding-bottom: 20px;
+  background-image: url(../images/blueWave.svg);
+  background-size: auto 20px;
+  -webkit-animation: blueWave 6s linear 0s infinite;
+          animation: blueWave 6s linear 0s infinite;
+}
+
+@-webkit-keyframes yellowWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -233px 0;
+  }
+}
+
+@keyframes yellowWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -233px 0;
+  }
+}
+
+@-webkit-keyframes blueWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -238px 0;
+  }
+}
+
+@keyframes blueWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -238px 0;
+  }
+}
+
+.stroke {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-bottom: 13%;
+}
+
+.stroke h1 {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -8%;
+  margin-bottom: 10%;
+}
+
+.stroke h1 .yellowWave {
+  bottom: -150%;
+  right: 30%;
+}
+
+.stroke h1 .blueWave {
+  bottom: -70%;
+  right: 20%;
+}
+
+.stroke .strokeList {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  text-align: center;
+}
+
+.stroke .strokeList .strokeItem {
+  padding: 10px 30px;
+  background: #062a48;
+  font-size: 1.6em;
+  font-weight: 700;
+  border-radius: 3px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+@media screen and (min-width: 1025px) {
+  .stroke .strokeList .strokeItem:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+}
+
+.stroke .strokeList .strokeItem h6 {
+  color: #ffda00;
+  line-height: 2em;
+}
+
+.stroke .strokeList .strokeItem p {
+  color: #ffffff;
+  line-height: 1.2em;
+}
