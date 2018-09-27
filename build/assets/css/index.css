@@ -122,7 +122,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .kvSlick .slider2 {
@@ -148,7 +148,7 @@
 
 .slogan .letsGo {
   width: 70%;
-  margin: 0 auto;
+  margin: 10px auto;
   position: relative;
   top: -15px;
   left: -220%;
@@ -157,9 +157,30 @@
   transition: all 3s ease;
 }
 
+.sloganSvg {
+  position: relative;
+  -webkit-filter: drop-shadow(6px 6px 10px #dbe9ff);
+  filter: drop-shadow(6px 6px 10px #dbe9ff);
+}
+
+.sloganSvg .sloganWave {
+  width: 47%;
+  padding-bottom: 12%;
+  background: url(../images/sloganWave.svg);
+  background-size: auto auto;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 19%;
+  right: 5%;
+  z-index: -1;
+  -webkit-animation: sloganWave 6s linear 0s infinite;
+          animation: sloganWave 6s linear 0s infinite;
+}
+
 .sloganSvg svg {
-  -webkit-filter: drop-shadow(12px 12px 10px white);
-  filter: drop-shadow(12px 12px 10px white);
+  -webkit-filter: drop-shadow(6px 6px 10px #dbe9ff);
+  filter: drop-shadow(6px 6px 10px #dbe9ff);
 }
 
 .sloganSvg .st0 {
@@ -182,6 +203,328 @@
   fill: #EB6348;
 }
 
+.sloganTopLine .st2 {
+  opacity: 0;
+}
+
+.sloganTopLine .st2:nth-child(1) {
+  -webkit-animation: sloganTopLine1 3s ease 3s infinite;
+          animation: sloganTopLine1 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(2) {
+  -webkit-animation: sloganTopLine2 3s ease 3s infinite;
+          animation: sloganTopLine2 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(3) {
+  -webkit-animation: sloganTopLine3 3s ease 3s infinite;
+          animation: sloganTopLine3 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(4) {
+  -webkit-animation: sloganTopLine4 3s ease 3s infinite;
+          animation: sloganTopLine4 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(5) {
+  -webkit-animation: sloganTopLine5 3s ease 3s infinite;
+          animation: sloganTopLine5 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(6) {
+  -webkit-animation: sloganTopLine6 3s ease 3s infinite;
+          animation: sloganTopLine6 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(7) {
+  -webkit-animation: sloganTopLine7 3s ease 3s infinite;
+          animation: sloganTopLine7 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(8) {
+  -webkit-animation: sloganTopLine8 3s ease 3s infinite;
+          animation: sloganTopLine8 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(9) {
+  -webkit-animation: sloganTopLine9 3s ease 3s infinite;
+          animation: sloganTopLine9 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(10) {
+  -webkit-animation: sloganTopLine10 3s ease 3s infinite;
+          animation: sloganTopLine10 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(11) {
+  -webkit-animation: sloganTopLine11 3s ease 3s infinite;
+          animation: sloganTopLine11 3s ease 3s infinite;
+}
+
+.sloganTopLine .st2:nth-child(12) {
+  -webkit-animation: sloganTopLine12 3s ease 3s infinite;
+          animation: sloganTopLine12 3s ease 3s infinite;
+}
+
+@-webkit-keyframes sloganWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -226px 0;
+  }
+}
+
+@keyframes sloganWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -226px 0;
+  }
+}
+
+@-webkit-keyframes sloganTopLine1 {
+  0% {
+    opacity: 0;
+  }
+  5%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine1 {
+  0% {
+    opacity: 0;
+  }
+  5%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine2 {
+  5% {
+    opacity: 0;
+  }
+  10%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine2 {
+  5% {
+    opacity: 0;
+  }
+  10%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine3 {
+  10% {
+    opacity: 0;
+  }
+  15%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine3 {
+  10% {
+    opacity: 0;
+  }
+  15%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine4 {
+  15% {
+    opacity: 0;
+  }
+  20%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine4 {
+  15% {
+    opacity: 0;
+  }
+  20%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine5 {
+  20% {
+    opacity: 0;
+  }
+  25%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine5 {
+  20% {
+    opacity: 0;
+  }
+  25%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine6 {
+  25% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine6 {
+  25% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine7 {
+  30% {
+    opacity: 0;
+  }
+  35%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine7 {
+  30% {
+    opacity: 0;
+  }
+  35%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine8 {
+  35% {
+    opacity: 0;
+  }
+  40%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine8 {
+  35% {
+    opacity: 0;
+  }
+  40%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine9 {
+  40% {
+    opacity: 0;
+  }
+  45%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine9 {
+  40% {
+    opacity: 0;
+  }
+  45%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine10 {
+  45% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine10 {
+  45% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine11 {
+  50% {
+    opacity: 0;
+  }
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine11 {
+  50% {
+    opacity: 0;
+  }
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sloganTopLine12 {
+  55% {
+    opacity: 0;
+  }
+  60%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sloganTopLine12 {
+  55% {
+    opacity: 0;
+  }
+  60%,
+  100% {
+    opacity: 1;
+  }
+}
+
 .sloganTxt {
   width: 100%;
   -webkit-transform: scale(0);
@@ -200,6 +543,17 @@
 
 .slogan .letsGoFly {
   left: 0;
+}
+
+#letsGoPlan .st0 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #FFAA00;
+}
+
+#letsGoPlan .st1,
+#letsGoPlan .stPlan {
+  fill: #FFFFFF;
 }
 
 .evaCity {
@@ -400,7 +754,7 @@
   display: inline-block;
   background-color: #2bbbbe;
   border-radius: 100px;
-  margin: 50px 20px;
+  margin: 50px;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -618,6 +972,23 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .flightInformation .flightInfoBtn {
+    margin: 30px 0;
+  }
+  .flightInformation .btn {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+  .flightInformation .btn a span.visible-phone {
+    display: inline-block !important;
+  }
+  .flightInformation .btn a br {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .containerBg:before,
   .containerBg:after {
@@ -649,12 +1020,6 @@
   .flightInformation p {
     font-size: 1.2em;
   }
-  .flightInformation .flightInfoBtn {
-    margin: 30px 0;
-  }
-  .flightInformation .btn {
-    margin: 0 5px;
-  }
   .flightInformation .btn a {
     font-size: 1.6em;
     line-height: 1.2em;
@@ -679,21 +1044,25 @@
   .stroke .strokeList .strokeItem {
     font-size: 1.2em;
   }
+  .strokeItemBr {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .flightInformation .btn {
-    margin: 10px;
-    display: block;
     border-radius: 44px;
   }
   .flightInformation .btn a {
     font-size: 1.4em;
   }
-  .flightInformation .btn a span.visible-phone {
-    display: inline-block !important;
+}
+
+@media screen and (max-width: 370px) {
+  .stroke .strokeList .strokeItem {
+    min-height: 100px;
   }
-  .flightInformation .btn a br {
-    display: none;
+  .strokeItemBr {
+    display: block;
   }
 }

@@ -118,7 +118,7 @@
             right: 0;
             left: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, .15);
+            background: rgba(255, 255, 255, .2);
         }
     }
     .slider2 {
@@ -139,7 +139,7 @@
     z-index: 3;
     .letsGo {
         width: 70%;
-        margin: 0 auto;
+        margin: 10px auto;
         position: relative;
         top: -15px;
         left: -220%;
@@ -148,9 +148,25 @@
 }
 
 .sloganSvg {
+    position: relative;
+    -webkit-filter: drop-shadow(6px 6px 10px rgb(219, 233, 255));
+    filter: drop-shadow(6px 6px 10px rgb(219, 233, 255));
+    .sloganWave {
+        width: 47%;
+        padding-bottom: 12%;
+        background: url(../images/sloganWave.svg);
+        background-size: auto auto;
+        background-position: 0 0;
+        background-repeat: repeat-x;
+        position: absolute;
+        bottom: 19%;
+        right: 5%;
+        z-index: -1;
+        animation: sloganWave 6s linear 0s infinite;
+    }
     svg {
-        -webkit-filter: drop-shadow(12px 12px 10px rgba(255, 255, 255, 1));
-        filter: drop-shadow(12px 12px 10px rgba(255, 255, 255, 1));
+        -webkit-filter: drop-shadow(6px 6px 10px rgb(219, 233, 255));
+        filter: drop-shadow(6px 6px 10px rgb(219, 233, 255));
     }
     .st0 {
         fill: #062A48;
@@ -169,6 +185,188 @@
     }
 }
 
+.sloganTopLine .st2 {
+    opacity: 0;
+    // animation-delay: 4s;
+    &:nth-child(1) {
+        animation: sloganTopLine1 3s ease 3s infinite;
+        // animation-delay: 0.5s;
+    }
+    &:nth-child(2) {
+        animation: sloganTopLine2 3s ease 3s infinite;
+        // animation-delay: 1s;
+    }
+    &:nth-child(3) {
+        animation: sloganTopLine3 3s ease 3s infinite;
+        // animation-delay: 1.5s;
+    }
+    &:nth-child(4) {
+        animation: sloganTopLine4 3s ease 3s infinite;
+        // animation-delay: 2s;
+    }
+    &:nth-child(5) {
+        animation: sloganTopLine5 3s ease 3s infinite;
+        // animation-delay: 2.5s;
+    }
+    &:nth-child(6) {
+        animation: sloganTopLine6 3s ease 3s infinite;
+        // animation-delay: 3s;
+    }
+    &:nth-child(7) {
+        animation: sloganTopLine7 3s ease 3s infinite;
+        // animation-delay: 3.5s;
+    }
+    &:nth-child(8) {
+        animation: sloganTopLine8 3s ease 3s infinite;
+        // animation-delay: 4s;
+    }
+    &:nth-child(9) {
+        animation: sloganTopLine9 3s ease 3s infinite;
+        // animation-delay: 4.5s;
+    }
+    &:nth-child(10) {
+        animation: sloganTopLine10 3s ease 3s infinite;
+        // animation-delay: 5s;
+    }
+    &:nth-child(11) {
+        animation: sloganTopLine11 3s ease 3s infinite;
+        // animation-delay: 5.5s;
+    }
+    &:nth-child(12) {
+        animation: sloganTopLine12 3s ease 3s infinite;
+        // animation-delay: 6s;
+    }
+}
+
+@keyframes sloganWave {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -226px 0;
+    }
+}
+
+@keyframes sloganTopLine1 {
+    0% {
+        opacity: 0;
+    }
+    5%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine2 {
+    5% {
+        opacity: 0;
+    }
+    10%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine3 {
+    10% {
+        opacity: 0;
+    }
+    15%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine4 {
+    15% {
+        opacity: 0;
+    }
+    20%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine5 {
+    20% {
+        opacity: 0;
+    }
+    25%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine6 {
+    25% {
+        opacity: 0;
+    }
+    30%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine7 {
+    30% {
+        opacity: 0;
+    }
+    35%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine8 {
+    35% {
+        opacity: 0;
+    }
+    40%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine9 {
+    40% {
+        opacity: 0;
+    }
+    45%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine10 {
+    45% {
+        opacity: 0;
+    }
+    50%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine11 {
+    50% {
+        opacity: 0;
+    }
+    55%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sloganTopLine12 {
+    55% {
+        opacity: 0;
+    }
+    60%,
+    100% {
+        opacity: 1;
+    }
+}
+
 .sloganTxt {
     width: 100%;
     transform: scale(0);
@@ -181,6 +379,18 @@
 
 .slogan .letsGoFly {
     left: 0;
+}
+
+#letsGoPlan {
+    .st0 {
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        fill: #FFAA00;
+    }
+    .st1,
+    .stPlan {
+        fill: #FFFFFF;
+    }
 }
 
 .evaCity {
@@ -347,7 +557,7 @@
         display: inline-block;
         background-color: #2bbbbe;
         border-radius: 100px;
-        margin: 50px 20px;
+        margin: 50px;
         @include transition(all 0.3s);
         @media screen and (min-width: 1025px) {
             &:hover {
@@ -515,6 +725,27 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .flightInformation {
+        .flightInfoBtn {
+            margin: 30px 0;
+        }
+        .btn {
+            width: 90%;
+            margin: 10px auto;
+            display: block;
+            a {
+                span.visible-phone {
+                    display: inline-block !important;
+                }
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 650px) {
     .containerBg:before,
     .containerBg:after {
@@ -543,11 +774,7 @@
         p {
             font-size: 1.2em;
         }
-        .flightInfoBtn {
-            margin: 30px 0;
-        }
         .btn {
-            margin: 0 5px;
             a {
                 font-size: 1.6em;
                 line-height: 1.2em;
@@ -575,23 +802,27 @@
             }
         }
     }
+    .strokeItemBr {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 375px) {
     .flightInformation {
         .btn {
-            margin: 10px;
-            display: block;
             border-radius: 44px;
             a {
                 font-size: 1.4em;
-                span.visible-phone {
-                    display: inline-block !important;
-                }
-                br {
-                    display: none;
-                }
             }
         }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .stroke .strokeList .strokeItem {
+        min-height: 100px;
+    }
+    .strokeItemBr {
+        display: block;
     }
 }

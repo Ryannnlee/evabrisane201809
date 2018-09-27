@@ -124,13 +124,12 @@ $(function () {
 
     //flightInformation slider
     $('.flightInfoSlick').slick({
-        // fade: true,
         dots: false,
         arrows: true,
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1
-        // autoplay: true
+        slidesToScroll: 1,
+        autoplay: true
     });
 
     // scrollTo
