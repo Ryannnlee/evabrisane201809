@@ -1,23 +1,16 @@
 'use strict';
 
+$(window).on("load", function () {
+    var h = $(window).height();
+    $('#loading').height(h);
+    setTimeout(function () {
+        $('#loading').fadeOut();
+    }, 1500);
+    $('html, body').animate({ scrollTop: 0 }, 1);
+});
+
 $(function () {
     var h = $(window).height();
-
-    $(window).on("load", function () {
-        setTimeout(function () {
-            $('#loading').fadeOut();
-        }, 1500);
-        $('html, body').animate({ scrollTop: 0 }, 1);
-        if (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())) {
-            setTimeout(function () {
-                $('#loading').fadeOut();
-            }, 1500);
-            $('html, body').animate({ scrollTop: 0 }, 1);
-        }
-    });
-
-    $('#loading').height(h);
-
     //kv animation
     if (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())) {
         setTimeout(function () {
@@ -74,11 +67,14 @@ $(function () {
     }
 
     $(window).on('scroll', function () {
-        var $flightInformation = $('.flightInformation').offset().top;
+        var $aircraftIntro = $('.aircraftIntro').offset().top;
+        var $flightInfo = $('.flightInfo').offset().top;
         var $stroke = $('.stroke').offset().top;
         $('#menu li').removeClass('underLineActive');
-        if ($(this).scrollTop() < $flightInformation - 300) {
+        if ($(this).scrollTop() < $aircraftIntro - 300) {
             $('.menuBrisbane').addClass('underLineActive');
+        } else if ($(this).scrollTop() < $flightInfo - 500) {
+            $('.menuAircraft').addClass('underLineActive');
         } else if ($(this).scrollTop() < $stroke - 500) {
             $('.menuFlight').addClass('underLineActive');
         } else {
@@ -122,8 +118,8 @@ $(function () {
         autoplay: true
     });
 
-    //flightInformation slider
-    $('.flightInfoSlick').slick({
+    //aircraftIntro slider
+    $('.aircraftIntroSlick').slick({
         dots: false,
         arrows: true,
         infinite: true,
@@ -136,9 +132,13 @@ $(function () {
     $('.menuBrisbane').on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, '800');
     });
+    $('.menuAircraft').on('click', function () {
+        var $aircraftIntro = $('.aircraftIntro').offset().top - 15;
+        $('html, body').animate({ scrollTop: $aircraftIntro }, '800');
+    });
     $('.menuFlight').on('click', function () {
-        var $flightInformation = $('.flightInformation').offset().top - 15;
-        $('html, body').animate({ scrollTop: $flightInformation }, '800');
+        var $flightInfo = $('.flightInfo').offset().top - 15;
+        $('html, body').animate({ scrollTop: $flightInfo }, '800');
     });
     $('.menuStroke').on('click', function () {
         var $stroke = $('.stroke').offset().top - 60;
